@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hIM-vz-dik">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CoreDataNew" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="hjk-R6-55V">
+                                <rect key="frame" x="165" y="228" width="45" height="231"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qll-v2-eoB">
+                                        <rect key="frame" x="0.0" y="0.0" width="45" height="30"/>
+                                        <state key="normal" title="Save"/>
+                                        <connections>
+                                            <action selector="handleSave:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1VF-5c-5Dy"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UcD-fU-AJD">
+                                        <rect key="frame" x="0.0" y="67" width="45" height="30"/>
+                                        <state key="normal" title="Fetch"/>
+                                        <connections>
+                                            <action selector="handleFetch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NbL-ht-7KV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RD2-Qe-UPu">
+                                        <rect key="frame" x="0.0" y="134" width="45" height="30"/>
+                                        <state key="normal" title="Delete"/>
+                                        <connections>
+                                            <action selector="handleDelete:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ECN-iX-8iA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n4w-vw-fTc">
+                                        <rect key="frame" x="0.0" y="201" width="45" height="30"/>
+                                        <state key="normal" title="Print"/>
+                                        <connections>
+                                            <action selector="handlePrint:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fzx-Wk-mXi"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hjk-R6-55V" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="dC3-X0-UdH"/>
+                            <constraint firstItem="hjk-R6-55V" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="eqr-Uf-bcu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-802" y="617"/>
+        </scene>
+        <!--People-->
+        <scene sceneID="yNz-Pj-X2u">
+            <objects>
+                <tableViewController id="PaX-k5-NnS" customClass="PeopleTableVC" customModule="CoreDataNew" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="0zG-Mf-9VV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <connections>
+                            <outlet property="dataSource" destination="PaX-k5-NnS" id="1UJ-lK-oDx"/>
+                            <outlet property="delegate" destination="PaX-k5-NnS" id="hld-dV-jjR"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="People" id="08Q-V1-aDA">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="YY9-zZ-qLb">
+                            <connections>
+                                <action selector="handleAddAction:" destination="PaX-k5-NnS" id="yDQ-bW-BIO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QHR-SI-UEM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1814" y="1012"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="1BH-YR-bj8">
+            <objects>
+                <tabBarController id="hIM-vz-dik" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ggd-aR-2gf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="MiA-NN-bLl" kind="relationship" relationship="viewControllers" id="YDh-uk-FAa"/>
+                        <segue destination="BGa-Pf-sKz" kind="relationship" relationship="viewControllers" id="kqn-eD-zgG"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fbt-b5-Byn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="95" y="617"/>
+        </scene>
+        <!--Projects-->
+        <scene sceneID="jQs-mv-EEF">
+            <objects>
+                <tableViewController id="h9j-Lf-B2B" customClass="ProjectsTableVC" customModule="CoreDataNew" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="e1q-Zq-iCC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <connections>
+                            <outlet property="dataSource" destination="h9j-Lf-B2B" id="Ug6-Fm-YVX"/>
+                            <outlet property="delegate" destination="h9j-Lf-B2B" id="TKf-ZI-Zf0"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Projects" id="6qW-cL-eXL">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="PMs-pw-pv5">
+                            <connections>
+                                <action selector="handleAddAction:" destination="h9j-Lf-B2B" id="CLd-bE-oXf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="wmj-hH-MEO" kind="show" identifier="ShowProjectDetail" id="Rm4-Ls-dKQ"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jvg-vA-OMY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1814" y="325"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="XYg-0k-n4G">
+            <objects>
+                <tableViewController id="wmj-hH-MEO" customClass="ProjectDetailTableVC" customModule="CoreDataNew" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="LRL-Nx-kms">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <connections>
+                            <outlet property="dataSource" destination="wmj-hH-MEO" id="gn9-rb-V1j"/>
+                            <outlet property="delegate" destination="wmj-hH-MEO" id="wjq-3x-gJR"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Title" id="Xib-bH-zlL">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="46v-K2-eU6">
+                            <connections>
+                                <action selector="handleAddAction:" destination="wmj-hH-MEO" id="PmH-X9-jMn"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h34-YS-ujj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2564" y="324"/>
+        </scene>
+        <!--People-->
+        <scene sceneID="cbe-5x-SV9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MiA-NN-bLl" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="People" image="people" id="9oF-dn-6W0"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="xGU-g4-FWq">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="PaX-k5-NnS" kind="relationship" relationship="rootViewController" id="ktm-Vy-G7M"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hYV-s2-Gyf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1049" y="1013"/>
+        </scene>
+        <!--Projects-->
+        <scene sceneID="CPV-H1-8ad">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BGa-Pf-sKz" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Projects" image="projects" id="S4F-Nb-RMg"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="t8w-MC-ykx">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="h9j-Lf-B2B" kind="relationship" relationship="rootViewController" id="B2c-mh-op1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pnD-95-lFZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1049" y="325"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="people" width="21.333333969116211" height="21.333333969116211"/>
+        <image name="projects" width="21.333333969116211" height="21.333333969116211"/>
+    </resources>
+</document>
