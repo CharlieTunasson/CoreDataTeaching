@@ -1,7 +1,7 @@
 # CoreDataTeaching
 A project that I use for training people on CoreData. 
 
-Some classes are not really structured purposely to be able to talk over things.
+Some classes are in a poorly structured manner purposely in order to talk over things during training.
 
 Some concepts are added just to set examples.
 
